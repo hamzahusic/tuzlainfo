@@ -4,7 +4,7 @@ const Footer = () => {
             <div className="main-container">
                 <div className=" text-center pt-20 pb-[120px]">
                     <h2 className="text-2xl md:text-3xl max-w-[600px] mx-auto">Saznajte prvi, živite najbolje: Vaš vodič kroz gradska dešavanja!</h2>
-                    <p className=" mt-4 mb-8">Imate priču ili pitanje? Kontaktirajte nas</p>
+                    <p className=" mt-4 mb-8">Imate priču ili pitanje? Kontaktirajte nas!</p>
                     <a href="mailto:tuzlainfo@gmail.com" className="bg-black text-white md:text-xl px-10 md:px-20 py-5 rounded-xl tracking-[3px]">tuzlainfo@gmail.com</a>
                 </div>
                 <div className="flex flex-col sm:flex-row justify-between items-center border-t-[1px] border-black">

@@ -9,8 +9,10 @@ import PopularNews from "../components/popularNews";
 const Home = () => {
 
     const [allBlogs,setAllBlogs] = useState([]);
+    const [isLoading,setLoading] = useState(false)
 
     const getAllBlogs = async () => {
+        setLoading(true)
         const request = await fetch("http://localhost:4003/objava/all");
         
         if(!request.ok){
@@ -21,6 +23,7 @@ const Home = () => {
         const data = await request.json();
         console.log(data.Data);
         setAllBlogs(data.Data);
+        setLoading(false)
     }
 
     useEffect(() => {
@@ -30,10 +33,10 @@ const Home = () => {
     return ( 
         <div>
             <Navbar />
-            <Hero blog={allBlogs}/>
+            <Hero blog={allBlogs} isLoading={isLoading}/>
             <Category/>
-            <LatesNews blog={allBlogs}/>
-            <PopularNews blog={allBlogs}/>
+            <LatesNews blog={allBlogs} isLoading={isLoading}/>
+            <PopularNews blog={allBlogs} isLoading={isLoading}/>
             <Footer/>
         </div>
      );

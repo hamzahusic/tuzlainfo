@@ -61,7 +61,7 @@ const AllBlogs = () => {
                             <img src={`/uploads/${blog.putanja_slike}`} alt="" className="max-w-[100px] object-cover"/>
                             <div className="flex flex-col justify-evenly">
                                 <h2 className="font-semibold">{blog.naslov}</h2>
-                                <p className="max-w-[1100px]">{blog.sadrzaj.substring(0,350) + "..."}</p>
+                                <p className="max-w-[800px]">{blog.sadrzaj.substring(0,200) + "..."}</p>
                             </div>
                         </div>
                         <div className="flex justify-between gap-5 items-center">
